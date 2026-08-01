@@ -207,6 +207,16 @@
   .cat-social .track-label{ background:var(--blue); color:#fff; }
   .cat-music .track-label{ background:var(--yellow); color:var(--ink); }
 
+  .subgroup{ margin-top:36px; }
+  .subgroup:first-of-type{ margin-top:0; }
+
+  .subhead{
+    font-family:'Archivo Black', sans-serif;
+    text-transform:uppercase;
+    font-size:18px;
+    margin-bottom:16px;
+  }
+
   .grid{ display:grid; grid-template-columns:repeat(2, 1fr); gap:26px; }
 
   .card{
@@ -410,10 +420,14 @@
     </div>
 
     <div class="category cat-narrative">
-      <div class="track-label">Church Campaign <span class="count">01 CUT</span></div>
+      <div class="track-label">Church Campaign <span class="count">02 CUTS</span></div>
       <div class="grid">
         <div class="card">
           <div class="frame"><iframe class="hover-video" src="https://www.youtube.com/embed/6mhcGt4ctjE?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
+          <div class="card-info"><h4>Church Campaign</h4><p>Ministry-driven campaign video.</p></div>
+        </div>
+        <div class="card">
+          <div class="frame"><iframe class="hover-video" src="https://www.youtube.com/embed/yyYtojYJWv0?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
           <div class="card-info"><h4>Church Campaign</h4><p>Ministry-driven campaign video.</p></div>
         </div>
       </div>
@@ -421,32 +435,42 @@
 
     <div class="category cat-commercial">
       <div class="track-label">Full Podcast Edits/Reels <span class="count">05 CUTS</span></div>
-      <div class="grid">
-        <div class="card">
-          <div class="frame"><iframe class="hover-video" src="https://www.youtube.com/embed/_PMoX2qlaLU?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
-          <div class="card-info"><h4>Full Podcast Episode</h4><p>I personally curated the intro, call to action for sponsors and outro of this channel's podcast.</p></div>
+
+      <div class="subgroup">
+        <div class="subhead">Full Podcast</div>
+        <div class="grid">
+          <div class="card">
+            <div class="frame"><iframe class="hover-video" src="https://www.youtube.com/embed/_PMoX2qlaLU?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
+            <div class="card-info"><h4>Full Podcast Episode</h4><p>I personally curated the intro, call to action for sponsors and outro of this channel's podcast.</p></div>
+          </div>
+          <div class="card">
+            <div class="frame"><iframe class="hover-video" src="https://www.youtube.com/embed/KlgsN6fq7hg?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
+            <div class="card-info"><h4>Prodigal's Podcast</h4><p>This is my personal podcast called "Prodigal's Podcast" that I also edit myself.</p></div>
+          </div>
         </div>
-        <div class="card">
-          <div class="frame portrait"><iframe class="hover-video" src="https://www.youtube.com/embed/Akwg6KGgAjQ?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
-          <div class="card-info"><h4>Podcast Short Clip</h4><p>Vertical cut from the same channel's podcast.</p></div>
-        </div>
-        <div class="card">
-          <div class="frame"><iframe class="hover-video" src="https://www.youtube.com/embed/KlgsN6fq7hg?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
-          <div class="card-info"><h4>Prodigal's Podcast</h4><p>This is my personal podcast called "Prodigal's Podcast" that I also edit myself.</p></div>
-        </div>
-        <div class="card">
-          <div class="frame portrait"><iframe class="hover-video" src="https://www.youtube.com/embed/lzQ2OLFXYww?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
-          <div class="card-info"><h4>Podcast Reel</h4><p>Vertical cut from a podcast episode.</p></div>
-        </div>
-        <div class="card">
-          <div class="frame portrait"><iframe class="hover-video" src="https://www.youtube.com/embed/Ym5jtR3F9ek?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
-          <div class="card-info"><h4>Podcast Reel</h4><p>Vertical cut from a podcast episode.</p></div>
+      </div>
+
+      <div class="subgroup">
+        <div class="subhead">Reels/Shorts</div>
+        <div class="grid">
+          <div class="card">
+            <div class="frame portrait"><iframe class="hover-video" src="https://www.youtube.com/embed/Akwg6KGgAjQ?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
+            <div class="card-info"><h4>Podcast Short Clip</h4><p>Vertical cut from the same channel's podcast.</p></div>
+          </div>
+          <div class="card">
+            <div class="frame portrait"><iframe class="hover-video" src="https://www.youtube.com/embed/lzQ2OLFXYww?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
+            <div class="card-info"><h4>Podcast Reel</h4><p>Vertical cut from a podcast episode.</p></div>
+          </div>
+          <div class="card">
+            <div class="frame portrait"><iframe class="hover-video" src="https://www.youtube.com/embed/Ym5jtR3F9ek?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
+            <div class="card-info"><h4>Podcast Reel</h4><p>Vertical cut from a podcast episode.</p></div>
+          </div>
         </div>
       </div>
     </div>
 
     <div class="category cat-social">
-      <div class="track-label">My Social/ Short-form <span class="count">04 CUTS</span></div>
+      <div class="track-label">My Social/ Short-form <span class="count">07 CUTS</span></div>
       <div class="grid">
         <div class="card">
           <div class="frame portrait"><iframe class="hover-video" src="https://www.youtube.com/embed/xekaSTzCTE0?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
@@ -463,6 +487,18 @@
         <div class="card">
           <div class="frame portrait"><iframe src="https://www.instagram.com/p/DaW_TqmPHjc/embed"></iframe></div>
           <div class="card-info"><h4>Instagram Post</h4><p>Social short-form cut.</p></div>
+        </div>
+        <div class="card">
+          <div class="frame portrait"><iframe src="https://www.instagram.com/p/DYPVgWQPBg7/embed"></iframe></div>
+          <div class="card-info"><h4>Instagram Post</h4><p>Simple cuts. Just color and story.</p></div>
+        </div>
+        <div class="card">
+          <div class="frame portrait"><iframe src="https://www.instagram.com/p/DX9EpJ9PyD9/embed"></iframe></div>
+          <div class="card-info"><h4>Instagram Post</h4><p>Simple cuts. Just color and story.</p></div>
+        </div>
+        <div class="card">
+          <div class="frame portrait"><iframe src="https://www.instagram.com/p/DYANsEDPnA8/embed"></iframe></div>
+          <div class="card-info"><h4>Instagram Post</h4><p>Simple cuts. Just color and story.</p></div>
         </div>
       </div>
     </div>
@@ -515,12 +551,11 @@
       </div>
 
       <ul class="skills-list">
-        <li><span>Editing</span><span>Premiere Pro, Avid</span></li>
-        <li><span>Color</span><span>DaVinci Resolve</span></li>
+        <li><span>Editing</span><span>Premiere, After Effects</span></li>
+        <li><span>Color</span><span>Premiere Color</span></li>
         <li><span>Motion / VFX</span><span>After Effects</span></li>
-        <li><span>Sound</span><span>Pro Tools</span></li>
-        <li><span>Based in</span><span>Your City</span></li>
-        <li><span>Turnaround</span><span>Your typical timeline</span></li>
+        <li><span>Sound</span><span>Slate Digital</span></li>
+        <li><span>Based in</span><span>Philippines</span></li>
       </ul>
     </div>
   </div>
