@@ -220,6 +220,7 @@
   .card:hover{ transform:translate(-3px,-3px); box-shadow:6px 6px 0 var(--ink); }
 
   .card .frame{ position:relative; padding-top:56.25%; background:#000; }
+  .card .frame.portrait{ padding-top:177.78%; }
   .card .frame iframe{ position:absolute; top:0; left:0; width:100%; height:100%; border:0; }
 
   .card-info{ padding:16px 18px; border-top:3px solid var(--ink); }
@@ -279,7 +280,81 @@
     border-top:1px solid #2a2a30;
   }
 
+  /* ---------- floating connect widget ---------- */
+  .connect-widget{
+    position:fixed;
+    bottom:28px;
+    right:28px;
+    z-index:150;
+    display:flex;
+    flex-direction:column;
+    align-items:flex-end;
+    gap:12px;
+  }
+
+  .connect-btn{
+    display:inline-flex;
+    align-items:center;
+    gap:10px;
+    background:var(--coral);
+    color:#fff;
+    border:3px solid var(--ink);
+    border-radius:100px;
+    padding:14px 26px;
+    font-family:'Archivo Black', sans-serif;
+    text-transform:uppercase;
+    font-size:14px;
+    cursor:pointer;
+    box-shadow:5px 5px 0 var(--ink);
+    transition:transform .15s, box-shadow .15s;
+  }
+
+  .connect-btn:hover{
+    transform:translate(-2px,-2px);
+    box-shadow:7px 7px 0 var(--ink);
+  }
+
+  .connect-btn .dot{
+    width:8px; height:8px; border-radius:50%;
+    background:#fff;
+    animation:blink 1.4s steps(2) infinite;
+  }
+
+  .connect-panel{
+    display:none;
+    flex-direction:column;
+    gap:10px;
+    background:#fff;
+    border:3px solid var(--ink);
+    border-radius:16px;
+    padding:16px;
+    box-shadow:5px 5px 0 var(--ink);
+    min-width:230px;
+  }
+
+  .connect-panel.open{ display:flex; }
+
+  .connect-panel a{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:12px 16px;
+    border:2px solid var(--ink);
+    border-radius:100px;
+    font-family:'Space Mono', monospace;
+    font-size:13px;
+    text-transform:uppercase;
+    transition:background .15s, transform .15s;
+  }
+
+  .connect-panel a:hover{ background:var(--yellow); transform:translateX(-2px); }
+  .connect-panel a.email{ background:var(--lime); }
+  .connect-panel a.insta{ background:var(--violet); color:#fff; }
+  .connect-panel a.fb{ background:var(--blue); color:#fff; }
+
   @media (max-width:760px){
+    .connect-widget{ bottom:18px; right:18px; }
+    .connect-btn{ padding:12px 20px; font-size:12px; }
     .grid{ grid-template-columns:1fr; }
     .about-grid{ grid-template-columns:1fr; }
     .nav-links{ display:none; }
@@ -331,48 +406,63 @@
 <section id="work">
   <div class="wrap">
     <div class="section-head">
-      <h2>The Work</h2>
-      <p class="section-tag">Sorted by craft, not by client — jump to what you're hiring for.</p>
+      <h2>My Work</h2>
     </div>
 
     <div class="category cat-narrative">
-      <div class="track-label">Narrative <span class="count">03 CUTS</span></div>
+      <div class="track-label">Church Campaign <span class="count">01 CUT</span></div>
       <div class="grid">
         <div class="card">
-          <div class="frame"><iframe class="hover-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
-          <div class="card-info"><h4>Project Title One</h4><p>Short film — Dir. Name — 2026</p></div>
-        </div>
-        <div class="card">
-          <div class="frame"><iframe class="hover-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
-          <div class="card-info"><h4>Project Title Two</h4><p>Short film — Dir. Name — 2025</p></div>
+          <div class="frame"><iframe class="hover-video" src="https://www.youtube.com/embed/6mhcGt4ctjE?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
+          <div class="card-info"><h4>Church Campaign</h4><p>Ministry-driven campaign video.</p></div>
         </div>
       </div>
     </div>
 
     <div class="category cat-commercial">
-      <div class="track-label">Commercial <span class="count">02 CUTS</span></div>
+      <div class="track-label">Full Podcast Edits/Reels <span class="count">05 CUTS</span></div>
       <div class="grid">
         <div class="card">
-          <div class="frame"><iframe class="hover-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
-          <div class="card-info"><h4>Brand Campaign</h4><p>30s spot — Client Name — 2026</p></div>
+          <div class="frame"><iframe class="hover-video" src="https://www.youtube.com/embed/_PMoX2qlaLU?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
+          <div class="card-info"><h4>Full Podcast Episode</h4><p>I personally curated the intro, call to action for sponsors and outro of this channel's podcast.</p></div>
         </div>
         <div class="card">
-          <div class="frame"><iframe class="hover-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
-          <div class="card-info"><h4>Product Launch</h4><p>60s spot — Client Name — 2025</p></div>
+          <div class="frame portrait"><iframe class="hover-video" src="https://www.youtube.com/embed/Akwg6KGgAjQ?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
+          <div class="card-info"><h4>Podcast Short Clip</h4><p>Vertical cut from the same channel's podcast.</p></div>
+        </div>
+        <div class="card">
+          <div class="frame"><iframe class="hover-video" src="https://www.youtube.com/embed/KlgsN6fq7hg?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
+          <div class="card-info"><h4>Prodigal's Podcast</h4><p>This is my personal podcast called "Prodigal's Podcast" that I also edit myself.</p></div>
+        </div>
+        <div class="card">
+          <div class="frame portrait"><iframe class="hover-video" src="https://www.youtube.com/embed/lzQ2OLFXYww?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
+          <div class="card-info"><h4>Podcast Reel</h4><p>Vertical cut from a podcast episode.</p></div>
+        </div>
+        <div class="card">
+          <div class="frame portrait"><iframe class="hover-video" src="https://www.youtube.com/embed/Ym5jtR3F9ek?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
+          <div class="card-info"><h4>Podcast Reel</h4><p>Vertical cut from a podcast episode.</p></div>
         </div>
       </div>
     </div>
 
     <div class="category cat-social">
-      <div class="track-label">Social / Short-form <span class="count">02 CUTS</span></div>
+      <div class="track-label">My Social/ Short-form <span class="count">04 CUTS</span></div>
       <div class="grid">
         <div class="card">
-          <div class="frame"><iframe class="hover-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
-          <div class="card-info"><h4>Series Name</h4><p>Vertical — 6 episodes — 2026</p></div>
+          <div class="frame portrait"><iframe class="hover-video" src="https://www.youtube.com/embed/xekaSTzCTE0?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
+          <div class="card-info"><h4>Short Clip</h4><p>Social short-form cut.</p></div>
         </div>
         <div class="card">
-          <div class="frame"><iframe class="hover-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
-          <div class="card-info"><h4>Recap Cut</h4><p>Vertical — single — 2025</p></div>
+          <div class="frame portrait"><iframe class="hover-video" src="https://www.youtube.com/embed/dIV2m6hFnbo?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
+          <div class="card-info"><h4>Short Clip</h4><p>Social short-form cut.</p></div>
+        </div>
+        <div class="card">
+          <div class="frame portrait"><iframe class="hover-video" src="https://www.youtube.com/embed/uQqz-hwcKpU?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
+          <div class="card-info"><h4>Short Clip</h4><p>Social short-form cut.</p></div>
+        </div>
+        <div class="card">
+          <div class="frame portrait"><iframe src="https://www.instagram.com/p/DaW_TqmPHjc/embed"></iframe></div>
+          <div class="card-info"><h4>Instagram Post</h4><p>Social short-form cut.</p></div>
         </div>
       </div>
     </div>
@@ -397,19 +487,30 @@
   <div class="wrap">
     <div class="section-head">
       <h2>About</h2>
-      <p class="section-tag">Background, tools, and how you work.</p>
     </div>
 
     <div class="about-grid">
       <div class="about-copy">
         <p>
-          Replace this paragraph with two or three sentences about your background —
-          how you got into editing, what kind of projects you gravitate toward, and
-          what a client can expect working with you.
+          I'm a Filipino content creator, pastor, and digital storyteller passionate about
+          bridging creativity, faith, and social impact. I started my career in 2016 as a
+          full-time video editor, where I learned the art of storytelling through visuals,
+          pacing, and emotion. Over the years, I've worked on a wide range of projects, from
+          short films and documentaries to viral online content.
         </p>
         <p>
-          Add a second paragraph if useful: turnaround style, remote or in-person,
-          what software you're fastest in, or a project that shaped how you edit.
+          In 2018, I expanded my role into social media strategy, helping individuals,
+          churches, and brands grow their influence through meaningful and message-driven
+          content. That journey led me to build Khan Santos TV, my digital platform where I
+          share faith-based, thought-provoking, and visually engaging videos that speak to
+          both Christian and mainstream audiences.
+        </p>
+        <p>
+          My passion has always been to translate deep biblical truths into relatable,
+          modern stories — mixing humor, theology, and culture in a way that resonates with
+          today's generation. Through my work, I've been able to reach millions across
+          Facebook, YouTube, and TikTok — not just to entertain, but to inspire
+          transformation through creative storytelling.
         </p>
       </div>
 
@@ -427,12 +528,11 @@
 
 <section id="contact" class="contact">
   <div class="wrap">
-    <h2>Let's cut something <span class="hl">great.</span></h2>
+    <h2>Let's cut to the <span class="hl">chase.</span></h2>
     <div class="contact-links">
-      <a href="mailto:you@example.com">you@example.com</a>
-      <a href="#">Instagram</a>
-      <a href="#">Vimeo</a>
-      <a href="#">LinkedIn</a>
+      <a href="mailto:khansantostv@gmail.com">Email me</a>
+      <a href="https://www.instagram.com/khansantostv/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://www.facebook.com/khansantosTV" target="_blank" rel="noopener">Facebook</a>
     </div>
   </div>
 </section>
@@ -441,6 +541,17 @@
   <span>© 2026 Khan Santos</span>
   <span class="mono">Built and cut with care</span>
 </footer>
+
+<div class="connect-widget">
+  <div class="connect-panel" id="connectPanel">
+    <a class="email" href="mailto:khansantostv@gmail.com">Email me</a>
+    <a class="insta" href="https://www.instagram.com/khansantostv/" target="_blank" rel="noopener">Instagram</a>
+    <a class="fb" href="https://www.facebook.com/khansantosTV" target="_blank" rel="noopener">Facebook</a>
+  </div>
+  <button class="connect-btn" id="connectBtn" type="button">
+    <span class="dot"></span>Connect with me
+  </button>
+</div>
 
 <script>
   // Play project video previews on hover, pause when the mouse leaves
@@ -456,6 +567,21 @@
 
     card.addEventListener('mouseenter', function(){ send('playVideo'); });
     card.addEventListener('mouseleave', function(){ send('pauseVideo'); });
+  });
+
+  // Floating "Connect with me" widget
+  var connectBtn = document.getElementById('connectBtn');
+  var connectPanel = document.getElementById('connectPanel');
+
+  connectBtn.addEventListener('click', function(e){
+    e.stopPropagation();
+    connectPanel.classList.toggle('open');
+  });
+
+  document.addEventListener('click', function(e){
+    if(!connectPanel.contains(e.target) && e.target !== connectBtn){
+      connectPanel.classList.remove('open');
+    }
   });
 </script>
 
