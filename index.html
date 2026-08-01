@@ -339,11 +339,11 @@
       <div class="track-label">Narrative <span class="count">03 CUTS</span></div>
       <div class="grid">
         <div class="card">
-          <div class="frame"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe></div>
+          <div class="frame"><iframe class="hover-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
           <div class="card-info"><h4>Project Title One</h4><p>Short film — Dir. Name — 2026</p></div>
         </div>
         <div class="card">
-          <div class="frame"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe></div>
+          <div class="frame"><iframe class="hover-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
           <div class="card-info"><h4>Project Title Two</h4><p>Short film — Dir. Name — 2025</p></div>
         </div>
       </div>
@@ -353,11 +353,11 @@
       <div class="track-label">Commercial <span class="count">02 CUTS</span></div>
       <div class="grid">
         <div class="card">
-          <div class="frame"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe></div>
+          <div class="frame"><iframe class="hover-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
           <div class="card-info"><h4>Brand Campaign</h4><p>30s spot — Client Name — 2026</p></div>
         </div>
         <div class="card">
-          <div class="frame"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe></div>
+          <div class="frame"><iframe class="hover-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
           <div class="card-info"><h4>Product Launch</h4><p>60s spot — Client Name — 2025</p></div>
         </div>
       </div>
@@ -367,11 +367,11 @@
       <div class="track-label">Social / Short-form <span class="count">02 CUTS</span></div>
       <div class="grid">
         <div class="card">
-          <div class="frame"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe></div>
+          <div class="frame"><iframe class="hover-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
           <div class="card-info"><h4>Series Name</h4><p>Vertical — 6 episodes — 2026</p></div>
         </div>
         <div class="card">
-          <div class="frame"><iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"></iframe></div>
+          <div class="frame"><iframe class="hover-video" src="https://www.youtube.com/embed/dQw4w9WgXcQ?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
           <div class="card-info"><h4>Recap Cut</h4><p>Vertical — single — 2025</p></div>
         </div>
       </div>
@@ -381,11 +381,11 @@
       <div class="track-label">Music Video <span class="count">02 CUTS</span></div>
       <div class="grid">
         <div class="card">
-          <div class="frame"><iframe src="https://www.youtube.com/embed/MZQZTn8hsf8"></iframe></div>
+          <div class="frame"><iframe class="hover-video" src="https://www.youtube.com/embed/MZQZTn8hsf8?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
           <div class="card-info"><h4>Music Video One</h4><p>I personally mastered the song and edited the music video.</p></div>
         </div>
         <div class="card">
-          <div class="frame"><iframe src="https://www.youtube.com/embed/yeLoe1RouPc"></iframe></div>
+          <div class="frame"><iframe class="hover-video" src="https://www.youtube.com/embed/yeLoe1RouPc?enablejsapi=1&mute=1&playsinline=1" allow="autoplay"></iframe></div>
           <div class="card-info"><h4>Music Video Two</h4><p>I personally mastered the song and edited the music video.</p></div>
         </div>
       </div>
@@ -441,6 +441,23 @@
   <span>© 2026 Khan Santos</span>
   <span class="mono">Built and cut with care</span>
 </footer>
+
+<script>
+  // Play project video previews on hover, pause when the mouse leaves
+  document.querySelectorAll('.card').forEach(function(card){
+    var iframe = card.querySelector('iframe.hover-video');
+    if(!iframe) return;
+
+    function send(command){
+      iframe.contentWindow.postMessage(JSON.stringify({
+        event:'command', func:command, args:[]
+      }), '*');
+    }
+
+    card.addEventListener('mouseenter', function(){ send('playVideo'); });
+    card.addEventListener('mouseleave', function(){ send('pauseVideo'); });
+  });
+</script>
 
 </body>
 </html>
